@@ -7,9 +7,6 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "../event_forms"
     }
   ],
   "extends": "../../tsconfig.base.json"

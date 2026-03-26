@@ -1,0 +1,10 @@
+{
+  "latestErrorEvent": {
+    "code": "TYPE-001",
+    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"npx tsc --project D:\\\\WorkShop\\\\projects\\\\react\\\\marathon-events\\\\apps\\\\event_forms\\\\node_modules\\\\.federation\\\\tsconfig.663f74bc7cda6ed22903c0a546bab486.json\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
+    "args": {
+      "cmd": "npx tsc --project D:\\WorkShop\\projects\\react\\marathon-events\\apps\\event_forms\\node_modules\\.federation\\tsconfig.663f74bc7cda6ed22903c0a546bab486.json"
+    },
+    "timestamp": 1774534104150
+  }
+}

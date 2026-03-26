@@ -62,7 +62,8 @@
         "options": {
           "buildTarget": "dashboard:build",
           "hmr": true,
-          "port": 4200
+          "port": 4200,
+          "devRemotes": ["event_forms"]
         },
         "configurations": {
           "development": {

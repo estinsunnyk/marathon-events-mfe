@@ -1,13 +1,5 @@
-// Uncomment this line to use CSS modules
-// import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
+import { EventForm } from './EventForm';
 
-export function App() {
-  return (
-    <div>
-      <NxWelcome title="event_forms" />
-    </div>
-  );
-}
+export { EventForm };
+export default EventForm;
 
-export default App;

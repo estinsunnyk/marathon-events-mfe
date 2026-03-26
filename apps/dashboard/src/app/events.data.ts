@@ -1,0 +1,58 @@
+import { MarathonEvent } from './types';
+
+export const marathonEvents: MarathonEvent[] = [
+  {
+    id: 1,
+    name: 'London Marathon',
+    location: 'London',
+    date: '2025-04-27',
+    distance: 26.2,
+    status: 'Open',
+    description: "One of the world's most iconic marathon routes through the heart of London.",
+  },
+  {
+    id: 2,
+    name: 'Manchester Marathon',
+    location: 'Manchester',
+    date: '2025-04-06',
+    distance: 26.2,
+    status: 'Open',
+    description: 'A flat, fast course through the streets of Greater Manchester.',
+  },
+  {
+    id: 3,
+    name: 'Brighton Marathon',
+    location: 'Brighton',
+    date: '2025-04-06',
+    distance: 26.2,
+    status: 'Closed',
+    description: 'A scenic coastal route finishing along the famous Brighton seafront.',
+  },
+  {
+    id: 4,
+    name: 'Edinburgh Marathon',
+    location: 'Edinburgh',
+    date: '2025-05-25',
+    distance: 26.2,
+    status: 'Open',
+    description: 'Stunning views of Edinburgh Castle and the Scottish countryside.',
+  },
+  {
+    id: 5,
+    name: 'Great North Run',
+    location: 'Newcastle',
+    date: '2025-09-07',
+    distance: 13.1,
+    status: 'Open',
+    description: "The world's biggest half marathon from Newcastle to South Shields.",
+  },
+  {
+    id: 6,
+    name: 'Bristol Half Marathon',
+    location: 'Bristol',
+    date: '2025-09-21',
+    distance: 13.1,
+    status: 'Upcoming',
+    description: 'A popular half marathon through the historic streets of Bristol.',
+  },
+];
