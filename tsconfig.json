@@ -8,6 +8,18 @@
     },
     {
       "path": "./apps/marathon-events"
+    },
+    {
+      "path": "./apps/dashboard-e2e"
+    },
+    {
+      "path": "./apps/dashboard"
+    },
+    {
+      "path": "./apps/event_forms-e2e"
+    },
+    {
+      "path": "./apps/event_forms"
     }
   ]
 }

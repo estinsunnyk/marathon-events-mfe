@@ -16,6 +16,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@marathon-events/source"]
+    "customConditions": ["@marathon-events/source"],
+    "baseUrl": "."
   }
 }

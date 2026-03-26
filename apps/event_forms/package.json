@@ -1,0 +1,106 @@
+{
+  "name": "event_forms",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "event_forms",
+    "sourceRoot": "apps/event_forms/src",
+    "targets": {
+      "build": {
+        "executor": "@nx/webpack:webpack",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "defaultConfiguration": "production",
+        "options": {
+          "compiler": "babel",
+          "outputPath": "apps/event_forms/dist",
+          "index": "apps/event_forms/src/index.html",
+          "baseHref": "/",
+          "main": "apps/event_forms/src/main.ts",
+          "tsConfig": "apps/event_forms/tsconfig.app.json",
+          "assets": [
+            "apps/event_forms/src/favicon.ico",
+            "apps/event_forms/src/assets"
+          ],
+          "styles": [
+            "apps/event_forms/src/styles.css"
+          ],
+          "scripts": [],
+          "webpackConfig": "apps/event_forms/webpack.config.ts"
+        },
+        "configurations": {
+          "development": {
+            "extractLicenses": false,
+            "optimization": false,
+            "sourceMap": true,
+            "vendorChunk": true
+          },
+          "production": {
+            "fileReplacements": [
+              {
+                "replace": "apps/event_forms/src/environments/environment.ts",
+                "with": "apps/event_forms/src/environments/environment.prod.ts"
+              }
+            ],
+            "optimization": true,
+            "outputHashing": "all",
+            "sourceMap": false,
+            "namedChunks": false,
+            "extractLicenses": true,
+            "vendorChunk": false
+          }
+        },
+        "dependsOn": [
+          "^build",
+          "typecheck"
+        ]
+      },
+      "serve": {
+        "executor": "@nx/react:module-federation-dev-server",
+        "defaultConfiguration": "development",
+        "options": {
+          "buildTarget": "event_forms:build",
+          "hmr": true,
+          "port": 4201
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "event_forms:build:development"
+          },
+          "production": {
+            "buildTarget": "event_forms:build:production",
+            "hmr": false
+          }
+        },
+        "dependsOn": [
+          "typecheck"
+        ]
+      },
+      "serve-static": {
+        "executor": "@nx/react:module-federation-static-server",
+        "defaultConfiguration": "production",
+        "options": {
+          "serveTarget": "event_forms:serve"
+        },
+        "configurations": {
+          "development": {
+            "serveTarget": "event_forms:serve:development"
+          },
+          "production": {
+            "serveTarget": "event_forms:serve:production"
+          }
+        }
+      }
+    }
+  },
+  "exports": {
+    "./Module": {
+      "@marathon-events/source": "./src/remote-entry.ts",
+      "types": "./src/remote-entry.ts",
+      "import": "./src/remote-entry.ts",
+      "default": "./src/remote-entry.ts"
+    }
+  },
+  "types": "./src/remote-entry.ts"
+}
